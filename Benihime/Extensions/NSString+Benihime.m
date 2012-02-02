@@ -56,4 +56,18 @@
   return truncatedString;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *) urlDecodedString
+{
+  NSString *ret = [self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+  return [ret stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// From: http://stackoverflow.com/a/2435502/246142
+- (NSString *) uppercasedFirstLetterString
+{
+  return [self stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self substringToIndex:1] uppercaseString]];
+}
+
 @end
