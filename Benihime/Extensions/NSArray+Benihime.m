@@ -25,12 +25,38 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSUInteger) findIndexUsingBlock:(BOOL (^)(id obj))block
+{
+  __block NSInteger index = NSNotFound;
+  [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    if (block(obj)) {
+      *stop = YES;
+      index = idx;
+    }
+  }];
+  
+  return index;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSMutableArray *) mapUsingBlock:(id (^)(id obj))block
 {
   NSMutableArray *ret = [NSMutableArray array];
   for (id object in self) {
     id result = block(object);
     [ret addObject:result];
+  }
+  
+  return ret;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSMutableArray *) filterUsingBlock:(BOOL (^)(id obj))block
+{
+  NSMutableArray *ret = [NSMutableArray array];
+  for (id object in self) {
+    if (block(object))
+      [ret addObject:object];
   }
   
   return ret;
