@@ -9,6 +9,7 @@
 
 CGRect BCGRectSetHeight(CGRect rect, CGFloat height);
 CGRect BCGRectSetY(CGRect rect, CGFloat y);
+CGRect BCGRectSetX(CGRect rect, CGFloat x);
 
 CGRect BCGRectAdd(CGRect rect, CGFloat x, CGFloat y, CGFloat width, CGFloat height);
 
