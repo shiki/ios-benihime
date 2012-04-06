@@ -12,4 +12,6 @@
 // Note that this has to be set on the "presenting" viewcontroller
 - (void) setBackButtonTitle:(NSString *)title;
 
+- (BOOL) isModal;
+
 @end
