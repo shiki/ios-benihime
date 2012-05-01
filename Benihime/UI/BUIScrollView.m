@@ -7,6 +7,7 @@
 //
 
 #import "BMacros.h"
+#import "BCGeometry.h"
 #import "BUIScrollView.h"
 #import "UIView+Benihime.h"
 

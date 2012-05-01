@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 CGRect BCGRectSetWidth(CGRect rect, CGFloat width);
 CGRect BCGRectSetHeight(CGRect rect, CGFloat height);
