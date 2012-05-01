@@ -2,7 +2,7 @@
 //  UIViewController+Benihime.m
 //  Benihime
 //
-//  Created by Shiki on 12/15/11.
+//  Created by Shiki on 11/16/11.
 //
 
 #import "UIViewController+Benihime.h"
@@ -11,6 +11,22 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation UIViewController (Benihime)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) addControllerViewAsSubView:(UIViewController *)controller animated:(BOOL)animated
+{
+  [controller viewWillAppear:animated];
+  [self.view addSubview:controller.view];
+  [controller viewDidAppear:animated];
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) removeControllerViewAsSubView:(UIViewController *)controller animated:(BOOL)animated
+{
+  [controller viewWillDisappear:animated];
+  [controller.view removeFromSuperview];
+  [controller viewDidDisappear:animated];
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void) setBackButtonTitle:(NSString *)title
@@ -43,8 +59,7 @@
     
   }
   
-  return isModal;        
-  
+  return isModal;
 }
 
 @end
