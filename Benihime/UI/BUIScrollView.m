@@ -3,8 +3,10 @@
 //  Benihime
 //
 //  Created by Shiki on 2/20/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "BMacros.h"
 #import "BUIScrollView.h"
 #import "UIView+Benihime.h"
 
@@ -40,6 +42,8 @@
 {
   NSDictionary *info = [notification userInfo];
   CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+  if (B_UI_ORIENTATION_IS_LANDSCAPE()) // reverse width/height
+    kbSize = CGSizeMake(kbSize.height, kbSize.width);
   
   NSInteger height = kbSize.height + heightAdjustOnVisibleKeyboard; 
   UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, height, 0.0);
@@ -58,6 +62,7 @@
 - (void) keyboardWillHide:(NSNotification *)notification
 {
   [UIView animateWithDuration:0.2f animations:^{
+    //scrollView.frame = self.view.frame;
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     
     self.contentInset = contentInsets;
