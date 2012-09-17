@@ -11,24 +11,18 @@
 
 @implementation NSString (Benihime)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (NSString *) generateUUID
-{
++ (NSString *)generateUUID {
   CFUUIDRef theUUID = CFUUIDCreate(NULL);
   CFStringRef string = CFUUIDCreateString(NULL, theUUID);
   CFRelease(theUUID);
   return [(NSString *)string autorelease];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *) trimmedString
-{
+- (NSString *)trimmedString {
   return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString*) stringByTruncatingToWidth:(CGFloat)width withFont:(UIFont *)font
-{
+- (NSString*)stringByTruncatingToWidth:(CGFloat)width withFont:(UIFont *)font {
   // Create copy that will be the returned result
   NSMutableString *truncatedString = [[self mutableCopy] autorelease];
   
@@ -56,18 +50,18 @@
   return truncatedString;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *) urlDecodedString
-{
+- (NSString *)urlDecodedString {
   NSString *ret = [self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
   return [ret stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
 // From: http://stackoverflow.com/a/2435502/246142
-- (NSString *) uppercasedFirstLetterString
-{
+- (NSString *)uppercasedFirstLetterString {
   return [self stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self substringToIndex:1] uppercaseString]];
+}
+
+- (NSString *)lowercasedFirstLetterString {
+  return [self stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self substringToIndex:1] lowercaseString]];
 }
 
 @end
