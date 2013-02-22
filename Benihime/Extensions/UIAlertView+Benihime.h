@@ -7,9 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface UIAlertView (Benihime)
 
-+ (UIAlertView *) singleButtonAlertView:(NSString *)title message:(NSString *)message 
-                            buttonTitle:(NSString *)buttonTitle;
++ (UIAlertView *)singleButtonAlertView:(NSString *)title message:(NSString *)message
+                           buttonTitle:(NSString *)buttonTitle;
 
 @end

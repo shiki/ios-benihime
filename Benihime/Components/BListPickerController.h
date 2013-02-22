@@ -7,22 +7,26 @@
 
 #import <UIKit/UIKit.h>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol BListPickerControllerDelegate
 
-- (void) listPickerDidSelectItem:(NSUInteger)rowIndex andValue:(id)value;
+- (void)listPickerDidSelectItem:(NSUInteger)rowIndex andValue:(id)value;
 
 @end
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BListPickerController : UITableViewController {
   
 }
 
-@property (nonatomic, assign) id<BListPickerControllerDelegate> delegate;
+@property (nonatomic, weak) id<BListPickerControllerDelegate> delegate;
 @property (nonatomic, strong) NSArray *listData;
 
-- (id) initWithStyle:(UITableViewStyle)style 
-               title:(NSString *)title
-            listData:(NSArray *)theListData 
-         andDelegate:(id<BListPickerControllerDelegate>)theDelegate;
+- (id)initWithStyle:(UITableViewStyle)style
+              title:(NSString *)title
+           listData:(NSArray *)theListData
+        andDelegate:(id<BListPickerControllerDelegate>)theDelegate;
 
 @end

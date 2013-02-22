@@ -7,13 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface UIView (Benihime)
 
 // From: http://stackoverflow.com/q/1823317/246142
-- (UIView *) findFirstResponder;
+- (UIView *)findFirstResponder;
 // From: http://stackoverflow.com/q/1823317/246142
-- (UIView *) findAndResignFirstResponder;
+- (UIView *)findAndResignFirstResponder;
 
-- (void) setTapResignsFirstResponder;
+- (void)setTapResignsFirstResponder;
 
 @end

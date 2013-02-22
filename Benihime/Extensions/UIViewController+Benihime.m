@@ -9,40 +9,30 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation UIViewController (Benihime)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) addControllerViewAsSubView:(UIViewController *)controller animated:(BOOL)animated
-{
+- (void)addControllerViewAsSubView:(UIViewController *)controller animated:(BOOL)animated {
   [controller viewWillAppear:animated];
   [self.view addSubview:controller.view];
   [controller viewDidAppear:animated];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) removeControllerViewAsSubView:(UIViewController *)controller animated:(BOOL)animated
-{
+- (void)removeControllerViewAsSubView:(UIViewController *)controller animated:(BOOL)animated {
   [controller viewWillDisappear:animated];
   [controller.view removeFromSuperview];
   [controller viewDidDisappear:animated];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) setBackButtonTitle:(NSString *)title
-{
-  self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] 
-                                            initWithTitle:title
-                                            style:UIBarButtonItemStylePlain target:nil 
-                                            action:nil] autorelease];
+- (void)setBackButtonTitle:(NSString *)title {
+  self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
+                                           initWithTitle:title
+                                           style:UIBarButtonItemStylePlain target:nil
+                                           action:nil];
 }
 
 // From: http://stackoverflow.com/a/6349300/246142
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (BOOL) isModal 
-{
-  
-  BOOL isModal = ((self.parentViewController && self.parentViewController.modalViewController == self) || 
+- (BOOL)isModal {
+  BOOL isModal = ((self.parentViewController && self.parentViewController.modalViewController == self) ||
                   //or if I have a navigation controller, check if its parent modal view controller is self navigation controller
                   ( self.navigationController && self.navigationController.parentViewController && self.navigationController.parentViewController.modalViewController == self.navigationController) || 
                   //or if the parent of my UITabBarController is also a UITabBarController class, then there is no way to do that, except by using a modal presentation

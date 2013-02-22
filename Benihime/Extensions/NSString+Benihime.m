@@ -9,13 +9,15 @@
 
 #define ellipsis @"…"
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation NSString (Benihime)
 
 + (NSString *)generateUUID {
   CFUUIDRef theUUID = CFUUIDCreate(NULL);
   CFStringRef string = CFUUIDCreateString(NULL, theUUID);
   CFRelease(theUUID);
-  return [(NSString *)string autorelease];
+  return (NSString *)CFBridgingRelease(string);
 }
 
 - (NSString *)trimmedString {
@@ -24,7 +26,7 @@
 
 - (NSString*)stringByTruncatingToWidth:(CGFloat)width withFont:(UIFont *)font {
   // Create copy that will be the returned result
-  NSMutableString *truncatedString = [[self mutableCopy] autorelease];
+  NSMutableString *truncatedString = [self mutableCopy];
   
   // Make sure string is longer than requested width
   if ([self sizeWithFont:font].width > width) {

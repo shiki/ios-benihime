@@ -8,22 +8,27 @@
 #import <UIKit/UIKit.h>
 
 @class BDateTimePickerController;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol BDateTimePickerControllerDelegate
 
 @optional
 
-- (void) dateTimePicker:(BDateTimePickerController *)picker didFinish:(NSDate *)dateTime;
+- (void)dateTimePicker:(BDateTimePickerController *)picker didFinish:(NSDate *)dateTime;
 
 @end
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BDateTimePickerController : UIViewController
 
-@property (nonatomic, assign) NSObject<BDateTimePickerControllerDelegate> *delegate;
-@property (nonatomic, retain) NSDate *dateTime;
+@property (nonatomic, weak) NSObject<BDateTimePickerControllerDelegate> *delegate;
+@property (nonatomic, strong) NSDate *dateTime;
 
-@property (nonatomic, retain) UIDatePicker *datePicker;
-@property (nonatomic, retain) UITextField *textField;
+@property (nonatomic, strong) UIDatePicker *datePicker;
+@property (nonatomic, strong) UITextField *textField;
 
-- (id) initWithDelegate:(NSObject<BDateTimePickerControllerDelegate> *)delegate initialDateTime:(NSDate *)dateTime;
+- (id)initWithDelegate:(NSObject<BDateTimePickerControllerDelegate> *)delegate initialDateTime:(NSDate *)dateTime;
 
 @end

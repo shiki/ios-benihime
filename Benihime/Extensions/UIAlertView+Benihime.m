@@ -9,17 +9,13 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation UIAlertView (Benihime)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (UIAlertView *) singleButtonAlertView:(NSString *)title message:(NSString *)message 
-                            buttonTitle:(NSString *)buttonTitle
-{
-  UIAlertView *alert = [[[UIAlertView alloc] 
-                         initWithTitle:title message:message
-                         delegate:nil cancelButtonTitle:buttonTitle
-                         otherButtonTitles:nil] autorelease];
++ (UIAlertView *)singleButtonAlertView:(NSString *)title message:(NSString *)message
+                           buttonTitle:(NSString *)buttonTitle {
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message
+                                                 delegate:nil cancelButtonTitle:buttonTitle
+                                        otherButtonTitles:nil];
   return alert;
 }
 

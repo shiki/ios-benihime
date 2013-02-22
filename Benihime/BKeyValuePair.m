@@ -6,23 +6,16 @@
 
 #import "BKeyValuePair.h"
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation BKeyValuePair
-
-@synthesize key;
-@synthesize value;
 
 - (id)initWithKey:(id)aKey andValue:(id)aValue {
   if ((self = [super init])) {
-    key   = [aKey retain];
-    value = [aValue retain];
+    self.key = aKey;
+    self.value = aValue;
   }
   return self;
-}
-
-- (void)dealloc {
-  [key release], key = nil;
-  [value release], value = nil;
-  [super dealloc];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -39,7 +32,7 @@
   } else if (![anObject isKindOfClass:[BKeyValuePair class]]) {
     ret = NO;
   } else {
-    ret = [key isEqual:((BKeyValuePair *)anObject).key] && [value isEqual:((BKeyValuePair *)anObject).value];
+    ret = [_key isEqual:((BKeyValuePair *)anObject).key] && [_value isEqual:((BKeyValuePair *)anObject).value];
   }
   return ret;
 }

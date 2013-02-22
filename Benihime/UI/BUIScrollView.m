@@ -13,22 +13,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation BUIScrollView
 
 @synthesize heightAdjustOnVisibleKeyboard;
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) dealloc
-{
+- (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
-  
-  [super dealloc];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) didMoveToSuperview
-{
+- (void)didMoveToSuperview {
   [super didMoveToSuperview];
   
   NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
@@ -38,9 +31,7 @@
              name:UIKeyboardWillHideNotification object:nil];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) keyboardDidShow:(NSNotification *)notification
-{
+- (void)keyboardDidShow:(NSNotification *)notification {
   NSDictionary *info = [notification userInfo];
   CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
   if (B_UI_ORIENTATION_IS_LANDSCAPE()) // reverse width/height
@@ -59,9 +50,7 @@
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) keyboardWillHide:(NSNotification *)notification
-{
+- (void)keyboardWillHide:(NSNotification *)notification {
   [UIView animateWithDuration:0.2f animations:^{
     //scrollView.frame = self.view.frame;
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;

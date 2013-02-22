@@ -14,16 +14,12 @@ CLLocationCoordinate2D const kBCLEmptyLocationCoordinate = { kEmptyLocation, kEm
 
 double const kBCLMetersPerMile = 1609.344;
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-BOOL BCLCoordinate2DEqualToCoordinate(CLLocationCoordinate2D coordinate1, 
-                                      CLLocationCoordinate2D coordinate2)
-{
-  return coordinate1.longitude == coordinate2.longitude 
+BOOL BCLCoordinate2DEqualToCoordinate(CLLocationCoordinate2D coordinate1,
+                                      CLLocationCoordinate2D coordinate2) {
+  return coordinate1.longitude == coordinate2.longitude
     && coordinate1.latitude == coordinate2.latitude;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-BOOL BCLCoordinate2DIsEmpty(CLLocationCoordinate2D coordinate)
-{
+BOOL BCLCoordinate2DIsEmpty(CLLocationCoordinate2D coordinate) {
   return BCLCoordinate2DEqualToCoordinate(coordinate, kBCLEmptyLocationCoordinate);
 }

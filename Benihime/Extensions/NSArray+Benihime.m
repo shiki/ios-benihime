@@ -9,12 +9,9 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation NSArray (Benihime)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) findUsingBlock:(BOOL (^)(id obj))block
-{
+- (id)findUsingBlock:(BOOL (^)(id obj))block {
   for (id object in self) {
     BOOL result = block(object);
     if (result)
@@ -24,9 +21,7 @@
   return nil;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSUInteger) findIndexUsingBlock:(BOOL (^)(id obj))block
-{
+- (NSUInteger)findIndexUsingBlock:(BOOL (^)(id obj))block {
   __block NSInteger index = NSNotFound;
   [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     if (block(obj)) {
@@ -38,9 +33,7 @@
   return index;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSMutableArray *) mapUsingBlock:(id (^)(id obj))block
-{
+- (NSMutableArray *)mapUsingBlock:(id (^)(id obj))block {
   NSMutableArray *ret = [NSMutableArray array];
   for (id object in self) {
     id result = block(object);
@@ -50,9 +43,7 @@
   return ret;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSMutableArray *) filterUsingBlock:(BOOL (^)(id obj))block
-{
+- (NSMutableArray *)filterUsingBlock:(BOOL (^)(id obj))block {
   NSMutableArray *ret = [NSMutableArray array];
   for (id object in self) {
     if (block(object))

@@ -9,12 +9,9 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation UIView (Benihime)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (UIView *) findFirstResponder
-{
+- (UIView *)findFirstResponder {
   if (self.isFirstResponder) {        
     return self;     
   }
@@ -30,28 +27,22 @@
   return nil;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (UIView *) findAndResignFirstResponder
-{
+- (UIView *)findAndResignFirstResponder {
   UIView *firstResponder = [self findFirstResponder];
   if (firstResponder)
     [firstResponder resignFirstResponder];
   return firstResponder;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) setTapResignsFirstResponder
-{
-  UITapGestureRecognizer *gesture = [[[UITapGestureRecognizer alloc] 
-                                     initWithTarget:self 
-                                     action:@selector(benihimeDidTapView:)] autorelease];
+- (void)setTapResignsFirstResponder {
+  UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]
+                                     initWithTarget:self
+                                     action:@selector(benihimeDidTapView:)];
   gesture.cancelsTouchesInView = NO;
   [self addGestureRecognizer:gesture];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) benihimeDidTapView:(UITapGestureRecognizer *)gesture
-{
+- (void)benihimeDidTapView:(UITapGestureRecognizer *)gesture {
   [self findAndResignFirstResponder];
 }
 

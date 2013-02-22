@@ -11,6 +11,7 @@
 #import "BCGeometry.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BDateTimePickerController ()
 
 - (void) updateTextField;
@@ -19,49 +20,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation BDateTimePickerController
 
-@synthesize delegate;
-@synthesize dateTime;
-
-@synthesize datePicker;
-@synthesize textField;
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void ) releaseViewComponents
-{
-  B_RELEASE_SAFELY(datePicker);
-  B_RELEASE_SAFELY(textField);
+- (void)afterInit {
+  if (!_dateTime)
+    self.dateTime = [[NSDate alloc] init];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) dealloc
-{
-  B_RELEASE_SAFELY(dateTime);
-  delegate = nil;
-  
-  [self releaseViewComponents];
-  
-  [super dealloc];
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) viewDidUnload
-{
-  [self releaseViewComponents];
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) afterInit
-{
-  if (!dateTime)
-    dateTime = [[NSDate alloc] init];
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id) initWithDelegate:(NSObject<BDateTimePickerControllerDelegate> *)aDelegate initialDateTime:(NSDate *)theDateTime
-{
+- (id)initWithDelegate:(NSObject<BDateTimePickerControllerDelegate> *)aDelegate
+       initialDateTime:(NSDate *)theDateTime {
   if ((self = [self init])) {
     self.delegate = aDelegate;
     self.dateTime = theDateTime;
@@ -70,78 +37,67 @@
   return self;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) loadView
-{
+- (void)loadView {
   if (!self.title)
     self.title = NSLocalizedString(@"Pick Date & Time", nil);
   
-  UIView *view = [[[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame] autorelease];
+  UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
   view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
   view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
   self.view = view;
   
-  self.datePicker = [[[UIDatePicker alloc] init] autorelease];
-  datePicker.minuteInterval = 5;
-  datePicker.frame = BCGRectSetY(datePicker.frame, self.view.frame.size.height - datePicker.frame.size.height);
-  datePicker.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-  [self.view addSubview:datePicker];
+  self.datePicker = [[UIDatePicker alloc] init];
+  _datePicker.minuteInterval = 5;
+  _datePicker.frame = BCGRectSetY(_datePicker.frame, self.view.frame.size.height - _datePicker.frame.size.height);
+  _datePicker.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+  [self.view addSubview:_datePicker];
   
-  self.textField = [[[UITextField alloc] init] autorelease];
-  textField.enabled = NO;
-  textField.borderStyle = UITextBorderStyleRoundedRect;
-  textField.font = [UIFont systemFontOfSize:14];
-  textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-  textField.textAlignment = UITextAlignmentCenter;
-  textField.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+  self.textField = [[UITextField alloc] init];
+  _textField.enabled = NO;
+  _textField.borderStyle = UITextBorderStyleRoundedRect;
+  _textField.font = [UIFont systemFontOfSize:14];
+  _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+  _textField.textAlignment = UITextAlignmentCenter;
+  _textField.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
   CGFloat height = 31;
   CGFloat margin = 10;
-  CGFloat y = (datePicker.frame.origin.y * 0.5) - height;
-  textField.frame = CGRectMake(margin, y, view.frame.size.width - margin * 2, height);
-  [self.view addSubview:textField];
+  CGFloat y = (_datePicker.frame.origin.y * 0.5) - height;
+  _textField.frame = CGRectMake(margin, y, view.frame.size.width - margin * 2, height);
+  [self.view addSubview:_textField];
   
   if (self.navigationController) {
-    UIBarButtonItem *bi = [[[UIBarButtonItem alloc] 
-                            initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self 
-                            action:@selector(didTapDoneButton:)] autorelease];
+    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self
+                                                                        action:@selector(didTapDoneButton:)];
     self.navigationItem.rightBarButtonItem = bi;
   }
   
-  [datePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
+  [_datePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
   
   [self updateTextField];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
   [self.navigationController setToolbarHidden:YES animated:animated];
   [super viewWillAppear:animated];
   
   self.view.frame = self.view.superview.bounds;
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) updateTextField
-{
-  NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+- (void)updateTextField {
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
   [formatter setDateFormat:@"EEE, MMM d, yyyy h:mm a"];
   
-  textField.text = [formatter stringFromDate:dateTime];
+  _textField.text = [formatter stringFromDate:_dateTime];
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) didTapDoneButton:(id)sender
-{
-  if (delegate && [delegate respondsToSelector:@selector(dateTimePicker:didFinish:)]) {
-    [delegate dateTimePicker:self didFinish:self.dateTime];
+- (void)didTapDoneButton:(id)sender {
+  if (_delegate && [_delegate respondsToSelector:@selector(dateTimePicker:didFinish:)]) {
+    [_delegate dateTimePicker:self didFinish:self.dateTime];
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) datePickerChanged:(id)sender
-{
-  self.dateTime = datePicker.date;
+- (void)datePickerChanged:(id)sender {
+  self.dateTime = _datePicker.date;
   [self updateTextField];
 }
 

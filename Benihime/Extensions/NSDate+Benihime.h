@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface NSDate (Benihime)
 
-+ (NSDate *) dateFromString:(NSString *)dateString format:(NSString *)format;
++ (NSDate *)dateFromString:(NSString *)dateString format:(NSString *)format;
 
-- (NSString *) stringWithFormat:(NSString *)format;
+- (NSString *)stringWithFormat:(NSString *)format;
 
 @end
