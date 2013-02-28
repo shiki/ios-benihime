@@ -66,4 +66,12 @@
   return [self stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self substringToIndex:1] lowercaseString]];
 }
 
+- (BOOL)contains:(NSString *)aString {
+  return [self contains:aString options:0];
+}
+
+- (BOOL)contains:(NSString *)aString options:(NSStringCompareOptions)mask {
+  return [self rangeOfString:aString options:mask].location != NSNotFound;
+}
+
 @end

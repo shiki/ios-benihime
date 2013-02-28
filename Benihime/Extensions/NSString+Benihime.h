@@ -27,4 +27,7 @@
 - (NSString *)uppercasedFirstLetterString;
 - (NSString *)lowercasedFirstLetterString;
 
+- (BOOL)contains:(NSString *)aString;
+- (BOOL)contains:(NSString *)aString options:(NSStringCompareOptions)mask;
+
 @end
