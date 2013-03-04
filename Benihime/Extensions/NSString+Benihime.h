@@ -30,4 +30,7 @@
 - (BOOL)contains:(NSString *)aString;
 - (BOOL)contains:(NSString *)aString options:(NSStringCompareOptions)mask;
 
+- (id)json;
+- (id)jsonWithOptions:(NSJSONReadingOptions)opt;
+
 @end

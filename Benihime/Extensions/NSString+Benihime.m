@@ -74,4 +74,15 @@
   return [self rangeOfString:aString options:mask].location != NSNotFound;
 }
 
+- (id)jsonWithOptions:(NSJSONReadingOptions)opt {
+  NSError *error = nil;
+  NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+  id json = [NSJSONSerialization JSONObjectWithData:data options:opt error:&error];
+  return error ? nil : json;
+}
+
+- (id)json {
+  return [self jsonWithOptions:0];
+}
+
 @end
