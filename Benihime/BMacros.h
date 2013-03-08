@@ -18,3 +18,12 @@
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+/**
+ * Null, Nil, Empty String macros
+ * From: http://koolistov.net/blog/2012/02/26/nil-null-empty-macros/
+ */
+#define NIL_IF_NULL(foo) ((foo == [NSNull null]) ? nil : foo)
+#define NULL_IF_NIL(foo) ((foo == nil) ? [NSNull null] : foo)
+#define EMPTY_IF_NIL(foo) ((foo == nil) ? @"" : foo)
+#define EMPTY_IF_NULL(foo) ([[NSNull null] isEqual:foo] ? @"" : foo)
