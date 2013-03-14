@@ -32,3 +32,12 @@ CGRect BCGRectExpand(CGRect rect, CGFloat x, CGFloat y) {
   CGSize size = rect.size;
   return CGRectMake(origin.x - x / 2, origin.y - y / 2, size.width + x, size.height + y); 
 }
+
+// From http://blog.digitalagua.com/2008/06/30/how-to-convert-degrees-to-radians-radians-to-degrees-in-objective-c/
+CGFloat BCGDegreesToRadians(CGFloat degrees) {
+  return degrees * M_PI / 180;
+};
+
+CGFloat BCGRadiansToDegrees(CGFloat radians) {
+  return radians * 180 / M_PI;
+};

@@ -16,3 +16,6 @@ CGRect BCGRectSetY(CGRect rect, CGFloat y);
 CGRect BCGRectAdd(CGRect rect, CGFloat x, CGFloat y, CGFloat width, CGFloat height);
 
 CGRect BCGRectExpand(CGRect rect, CGFloat x, CGFloat y);
+
+CGFloat BCGDegreesToRadians(CGFloat degrees);
+CGFloat BCGRadiansToDegrees(CGFloat radians);
