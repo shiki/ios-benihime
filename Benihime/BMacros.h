@@ -27,3 +27,5 @@
 #define NULL_IF_NIL(foo) ((foo == nil) ? [NSNull null] : foo)
 #define EMPTY_IF_NIL(foo) ((foo == nil) ? @"" : foo)
 #define EMPTY_IF_NULL(foo) ([[NSNull null] isEqual:foo] ? @"" : foo)
+
+#define SAFE_EXEC_BLOCK(block, ...) block ? block(__VA_ARGS__) : nil
