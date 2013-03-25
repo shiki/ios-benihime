@@ -26,4 +26,9 @@
 // pass a truth test (block returns YES).
 - (NSMutableArray *)filterUsingBlock:(BOOL (^)(id obj))block;
 
+// Converts this object to a JSON string. Returns nil if an error happens when converting.
+// This uses the built-in JSON serializer since iOS 5.
+- (NSString *)jsonString:(NSJSONWritingOptions)opt;
+- (NSString *)jsonString;
+
 @end

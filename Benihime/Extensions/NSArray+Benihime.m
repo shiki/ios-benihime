@@ -53,4 +53,19 @@
   return ret;
 }
 
+- (NSString *)jsonString:(NSJSONWritingOptions)opt {
+  NSError *error = nil;
+  NSData *data = [NSJSONSerialization dataWithJSONObject:self options:opt error:&error];
+  if (data) {
+    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return ret;
+  } else {
+    return nil;
+  }
+}
+
+- (NSString *)jsonString {
+  return [self jsonString:0];
+}
+
 @end
