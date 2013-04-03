@@ -15,6 +15,10 @@ CGRect BCGRectSetHeight(CGRect rect, CGFloat height) {
   return CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height);
 }
 
+CGRect BCGRectSetSize(CGRect rect, CGSize size) {
+  return CGRectMake(rect.origin.x, rect.origin.y, size.width, size.height);
+}
+
 CGRect BCGRectSetX(CGRect rect, CGFloat x) {
   return CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height);
 }
