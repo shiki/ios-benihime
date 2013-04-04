@@ -23,13 +23,32 @@
   return [formatter stringFromDate:self];
 }
 
+- (NSInteger)hour {
+  return [self hourUsingCalendar:[NSCalendar currentCalendar]];
+}
+
 - (NSInteger)hourUsingCalendar:(NSCalendar *)calendar {
   NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:self];
   return [components hour];
 }
 
-- (NSInteger)hour {
-  return [self hourUsingCalendar:[NSCalendar currentCalendar]];
+- (NSInteger)month {
+  return [self monthUsingCalendar:[NSCalendar currentCalendar]];
 }
+
+- (NSInteger)monthUsingCalendar:(NSCalendar *)calendar {
+  NSDateComponents *components = [calendar components:NSMonthCalendarUnit fromDate:self];
+  return [components month];
+}
+
+- (NSInteger)year {
+  return [self yearUsingCalendar:[NSCalendar currentCalendar]];
+}
+
+- (NSInteger)yearUsingCalendar:(NSCalendar *)calendar {
+  NSDateComponents *components = [calendar components:NSYearCalendarUnit fromDate:self];
+  return [components year];
+}
+
 
 @end

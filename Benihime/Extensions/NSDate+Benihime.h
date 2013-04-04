@@ -15,7 +15,12 @@
 
 - (NSString *)stringWithFormat:(NSString *)format;
 
-- (NSInteger)hourUsingCalendar:(NSCalendar *)calendar;
 - (NSInteger)hour;
+- (NSInteger)hourUsingCalendar:(NSCalendar *)calendar;
+- (NSInteger)month;
+- (NSInteger)monthUsingCalendar:(NSCalendar *)calendar;
+- (NSInteger)year;
+- (NSInteger)yearUsingCalendar:(NSCalendar *)calendar;
+
 
 @end
