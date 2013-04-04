@@ -23,4 +23,13 @@
   return [formatter stringFromDate:self];
 }
 
+- (NSInteger)hourUsingCalendar:(NSCalendar *)calendar {
+  NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:self];
+  return [components hour];
+}
+
+- (NSInteger)hour {
+  return [self hourUsingCalendar:[NSCalendar currentCalendar]];
+}
+
 @end
