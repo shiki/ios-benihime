@@ -4,10 +4,13 @@
 //  Created by Shiki on 11/23/11.
 //
 
-#define B_UI_IS_IPAD() UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
-
 #define B_UI_ORIENTATION_IS_PORTRAIT() UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 #define B_UI_ORIENTATION_IS_LANDSCAPE() UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+
+// http://stackoverflow.com/a/13156390/246142
+#define DEVICE_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define DEVICE_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define DEVICE_IS_TALL_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
 
 /**
  * System Versioning Preprocessor Macros
