@@ -46,4 +46,17 @@
   [self findAndResignFirstResponder];
 }
 
+- (UIView *)ancestorWithClass:(Class)ancestorClass {
+  return [self.class ancestorOfView:self withClass:ancestorClass];
+}
+
++ (UIView *)ancestorOfView:(UIView *)child withClass:(Class)ancestorClass {
+  if (!child.superview)
+    return nil;
+  if ([child.superview isKindOfClass:ancestorClass])
+    return child.superview;
+  return [self.class ancestorOfView:child.superview withClass:ancestorClass];
+}
+
+
 @end

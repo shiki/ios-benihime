@@ -18,4 +18,7 @@
 
 - (void)setTapResignsFirstResponder;
 
+- (UIView *)ancestorWithClass:(Class)ancestorClass;
++ (UIView *)ancestorOfView:(UIView *)child withClass:(Class)ancestorClass;
+
 @end
