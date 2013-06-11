@@ -21,3 +21,5 @@ CGRect BCGRectExpand(CGRect rect, CGFloat x, CGFloat y);
 
 CGFloat BCGDegreesToRadians(CGFloat degrees);
 CGFloat BCGRadiansToDegrees(CGFloat radians);
+// Normalizze and return the value as between 0 and 360
+CGFloat BCGNormalizeDegrees(CGFloat degrees);

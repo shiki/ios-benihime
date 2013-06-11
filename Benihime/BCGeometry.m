@@ -6,6 +6,7 @@
 //
 
 #import "BCGeometry.h"
+#import <math.h>
 
 CGRect BCGRectSetWidth(CGRect rect, CGFloat width) {
   return CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);
@@ -38,7 +39,7 @@ CGRect BCGRectAdd(CGRect rect, CGFloat x, CGFloat y, CGFloat width, CGFloat heig
 CGRect BCGRectExpand(CGRect rect, CGFloat x, CGFloat y) {
   CGPoint origin = rect.origin;
   CGSize size = rect.size;
-  return CGRectMake(origin.x - x / 2, origin.y - y / 2, size.width + x, size.height + y); 
+  return CGRectMake(origin.x - x / 2, origin.y - y / 2, size.width + x, size.height + y);
 }
 
 // From http://blog.digitalagua.com/2008/06/30/how-to-convert-degrees-to-radians-radians-to-degrees-in-objective-c/
@@ -49,3 +50,10 @@ CGFloat BCGDegreesToRadians(CGFloat degrees) {
 CGFloat BCGRadiansToDegrees(CGFloat radians) {
   return radians * 180 / M_PI;
 };
+
+CGFloat BCGNormalizeDegrees(CGFloat degrees) {
+  degrees = fmodf(degrees, 360.f);
+  if (degrees < 0)
+    degrees += 360.f;
+  return degrees;
+}
