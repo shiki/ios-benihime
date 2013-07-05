@@ -32,6 +32,12 @@ CGRect BCGRectSetOrigin(CGRect rect, CGPoint origin) {
   return CGRectMake(origin.x, origin.y, rect.size.width, rect.size.height);
 }
 
+CGRect BCGRectSetOriginToCenter(CGRect rect, CGRect container) {
+  CGPoint center = CGPointMake(CGRectGetMidX(container), CGRectGetMidY(container));
+  return CGRectMake(center.x - rect.size.width * 0.5f, center.y - rect.size.height * 0.5f,
+    rect.size.width, rect.size.height);
+}
+
 CGRect BCGRectAdd(CGRect rect, CGFloat x, CGFloat y, CGFloat width, CGFloat height) {
   return CGRectMake(rect.origin.x + x, rect.origin.y + y, rect.size.width + width, rect.size.height + height);
 }
