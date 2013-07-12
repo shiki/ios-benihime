@@ -15,6 +15,8 @@
 @interface BUIScrollView : UIScrollView
 
 // supa long property name!
-@property (nonatomic) NSInteger heightAdjustOnVisibleKeyboard;
+@property (nonatomic) CGFloat heightAdjustOnVisibleKeyboard;
+// The margin added when scrollRectToVisible is called
+@property (nonatomic) CGSize visibleRectMargin;
 
 @end

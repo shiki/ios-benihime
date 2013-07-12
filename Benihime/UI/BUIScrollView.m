@@ -3,7 +3,6 @@
 //  Benihime
 //
 //  Created by Shiki on 2/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "BMacros.h"
@@ -15,7 +14,27 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation BUIScrollView
 
-@synthesize heightAdjustOnVisibleKeyboard;
+- (id)init {
+  if ((self = [super init]))
+    [self onInit];
+  return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  if ((self = [super initWithCoder:aDecoder]))
+    [self onInit];
+  return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+  if ((self = [super initWithFrame:frame]))
+    [self onInit];
+  return self;
+}
+
+- (void)onInit {
+  self.visibleRectMargin = CGSizeMake(0.f, 10.f);
+}
 
 - (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -37,22 +56,21 @@
   if (B_UI_ORIENTATION_IS_LANDSCAPE()) // reverse width/height
     kbSize = CGSizeMake(kbSize.height, kbSize.width);
   
-  NSInteger height = kbSize.height + heightAdjustOnVisibleKeyboard; 
+  NSInteger height = kbSize.height + _heightAdjustOnVisibleKeyboard;
   UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, height, 0.0);
   self.contentInset = contentInsets;
   self.scrollIndicatorInsets = contentInsets;  
   
   UIView *firstResponder = [self findFirstResponder];
   if (firstResponder && firstResponder != self) {
-    CGRect f = BCGRectExpand(firstResponder.frame, 0, 10);
-    // @todo this doesn't seem to work well sometimes
+    CGRect f = [firstResponder.superview convertRect:firstResponder.frame toView:self];
+    f = BCGRectExpand(f, _visibleRectMargin.width, _visibleRectMargin.height);
     [self scrollRectToVisible:f animated:YES];
   }
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
   [UIView animateWithDuration:0.2f animations:^{
-    //scrollView.frame = self.view.frame;
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     
     self.contentInset = contentInsets;
