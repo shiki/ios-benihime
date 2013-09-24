@@ -78,4 +78,17 @@
   return nil;
 }
 
+- (UIView *)childWithClass:(Class)childClass {
+  return [self.class childOfView:self withClass:childClass];
+}
+
++ (UIView *)childOfView:(UIView *)parent withClass:(Class)childClass {
+  for (UIView *child in parent.subviews) {
+    if ([child isKindOfClass:childClass])
+      return child;
+  }
+
+  return nil;
+}
+
 @end
