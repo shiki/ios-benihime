@@ -23,5 +23,6 @@
 - (void)setBackButtonTitle:(NSString *)title;
 
 - (void)setNeedsStatusBarAppearanceUpdateIfSupported;
+- (void)setAutomaticallyAdjustsScrollViewInsetsIfSupported:(BOOL)autoAdjust;
 
 @end

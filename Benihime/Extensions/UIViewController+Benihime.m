@@ -57,4 +57,10 @@
     [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
 }
 
+- (void)setAutomaticallyAdjustsScrollViewInsetsIfSupported:(BOOL)autoAdjust {
+  if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
+    self.automaticallyAdjustsScrollViewInsets = autoAdjust;
+  }
+}
+
 @end
