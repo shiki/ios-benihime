@@ -21,4 +21,18 @@
   return [ret copy];
 }
 
++ (NSArray *)indexPathsForIndexSet:(NSIndexSet *)indexes withSection:(NSUInteger)section {
+  NSMutableArray *paths = [NSMutableArray array];
+
+  NSUInteger currentIndex = [indexes firstIndex];
+  while (currentIndex != NSNotFound) {
+    NSIndexPath *path = [NSIndexPath indexPathForRow:currentIndex inSection:section];
+    [paths addObject:path];
+
+    currentIndex = [indexes indexGreaterThanIndex:currentIndex];
+  }
+
+  return paths;
+}
+
 @end

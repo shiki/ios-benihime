@@ -19,4 +19,6 @@
 + (NSArray *)sequentialIndexPathsFromRow:(NSUInteger)startingRow withCount:(NSUInteger)count
                                inSection:(NSUInteger)section;
 
++ (NSArray *)indexPathsForIndexSet:(NSIndexSet *)indexes withSection:(NSUInteger)section;
+
 @end
