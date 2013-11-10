@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57047CA9182F23CF00C31854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57047CA8182F23CF00C31854 /* Foundation.framework */; };
+		57047CAE182F23CF00C31854 /* Benihime.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57047CAD182F23CF00C31854 /* Benihime.h */; };
+		57047CB0182F23CF00C31854 /* Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 57047CAF182F23CF00C31854 /* Benihime.m */; };
+		57047CB7182F23CF00C31854 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57047CB6182F23CF00C31854 /* XCTest.framework */; };
+		57047CB8182F23CF00C31854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57047CA8182F23CF00C31854 /* Foundation.framework */; };
+		57047CBA182F23CF00C31854 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57047CB9182F23CF00C31854 /* UIKit.framework */; };
+		57047CBD182F23CF00C31854 /* libBenihime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57047CA5182F23CF00C31854 /* libBenihime.a */; };
+		57047CC3182F23CF00C31854 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57047CC1182F23CF00C31854 /* InfoPlist.strings */; };
+		57047CC5182F23CF00C31854 /* BenihimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57047CC4182F23CF00C31854 /* BenihimeTests.m */; };
+		571EF07F182F244E00B92ADA /* BCGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF045182F244E00B92ADA /* BCGeometry.m */; };
+		571EF080182F244E00B92ADA /* BCoreLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF047182F244E00B92ADA /* BCoreLocation.m */; };
+		571EF081182F244E00B92ADA /* BKeyValuePair.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF049182F244E00B92ADA /* BKeyValuePair.m */; };
+		571EF082182F244E00B92ADA /* BDateTimePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF04D182F244E00B92ADA /* BDateTimePickerController.m */; };
+		571EF083182F244E00B92ADA /* BListPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF04F182F244E00B92ADA /* BListPickerController.m */; };
+		571EF084182F244E00B92ADA /* MKMapView+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF052182F244E00B92ADA /* MKMapView+Benihime.m */; };
+		571EF085182F244E00B92ADA /* NSArray+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF054182F244E00B92ADA /* NSArray+Benihime.m */; };
+		571EF086182F244E00B92ADA /* NSCharacterSet+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF056182F244E00B92ADA /* NSCharacterSet+Benihime.m */; };
+		571EF087182F244E00B92ADA /* NSDate+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF058182F244E00B92ADA /* NSDate+Benihime.m */; };
+		571EF088182F244E00B92ADA /* NSDictionary+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF05A182F244E00B92ADA /* NSDictionary+Benihime.m */; };
+		571EF089182F244E00B92ADA /* NSError+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF05C182F244E00B92ADA /* NSError+Benihime.m */; };
+		571EF08A182F244E00B92ADA /* NSIndexPath+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF05E182F244E00B92ADA /* NSIndexPath+Benihime.m */; };
+		571EF08B182F244E00B92ADA /* NSMutableArray+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF060182F244E00B92ADA /* NSMutableArray+Benihime.m */; };
+		571EF08C182F244E00B92ADA /* NSNumber+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF062182F244E00B92ADA /* NSNumber+Benihime.m */; };
+		571EF08D182F244E00B92ADA /* NSString+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF064182F244E00B92ADA /* NSString+Benihime.m */; };
+		571EF08E182F244E00B92ADA /* UIAlertView+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF066182F244E00B92ADA /* UIAlertView+Benihime.m */; };
+		571EF08F182F244E00B92ADA /* UIColor+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF068182F244E00B92ADA /* UIColor+Benihime.m */; };
+		571EF090182F244E00B92ADA /* UIImage+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF06A182F244E00B92ADA /* UIImage+Benihime.m */; };
+		571EF091182F244E00B92ADA /* UINavigationController+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF06C182F244E00B92ADA /* UINavigationController+Benihime.m */; };
+		571EF092182F244E00B92ADA /* UITableView+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF06E182F244E00B92ADA /* UITableView+Benihime.m */; };
+		571EF093182F244E00B92ADA /* UIView+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF070182F244E00B92ADA /* UIView+Benihime.m */; };
+		571EF094182F244E00B92ADA /* UIViewController+Benihime.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF072182F244E00B92ADA /* UIViewController+Benihime.m */; };
+		571EF095182F244E00B92ADA /* BMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF075182F244E00B92ADA /* BMapAnnotation.m */; };
+		571EF096182F244E00B92ADA /* BUIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF078182F244E00B92ADA /* BUIScrollView.m */; };
+		571EF097182F244E00B92ADA /* NSDictionary+UrlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF07C182F244E00B92ADA /* NSDictionary+UrlEncoding.m */; };
+		571EF098182F244E00B92ADA /* UIFont+Traits.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF07E182F244E00B92ADA /* UIFont+Traits.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57047CBB182F23CF00C31854 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57047C9D182F23CF00C31854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57047CA4182F23CF00C31854;
+			remoteInfo = Benihime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57047CA3182F23CF00C31854 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				57047CAE182F23CF00C31854 /* Benihime.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		57047CA5182F23CF00C31854 /* libBenihime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBenihime.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		57047CA8182F23CF00C31854 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		57047CAC182F23CF00C31854 /* Benihime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Benihime-Prefix.pch"; sourceTree = "<group>"; };
+		57047CAD182F23CF00C31854 /* Benihime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Benihime.h; sourceTree = "<group>"; };
+		57047CAF182F23CF00C31854 /* Benihime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Benihime.m; sourceTree = "<group>"; };
+		57047CB5182F23CF00C31854 /* BenihimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenihimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57047CB6182F23CF00C31854 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		57047CB9182F23CF00C31854 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		57047CC0182F23CF00C31854 /* BenihimeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BenihimeTests-Info.plist"; sourceTree = "<group>"; };
+		57047CC2182F23CF00C31854 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		57047CC4182F23CF00C31854 /* BenihimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BenihimeTests.m; sourceTree = "<group>"; };
+		571EF044182F244E00B92ADA /* BCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGeometry.h; sourceTree = "<group>"; };
+		571EF045182F244E00B92ADA /* BCGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGeometry.m; sourceTree = "<group>"; };
+		571EF046182F244E00B92ADA /* BCoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCoreLocation.h; sourceTree = "<group>"; };
+		571EF047182F244E00B92ADA /* BCoreLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCoreLocation.m; sourceTree = "<group>"; };
+		571EF048182F244E00B92ADA /* BKeyValuePair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKeyValuePair.h; sourceTree = "<group>"; };
+		571EF049182F244E00B92ADA /* BKeyValuePair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKeyValuePair.m; sourceTree = "<group>"; };
+		571EF04A182F244E00B92ADA /* BMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMacros.h; sourceTree = "<group>"; };
+		571EF04C182F244E00B92ADA /* BDateTimePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDateTimePickerController.h; sourceTree = "<group>"; };
+		571EF04D182F244E00B92ADA /* BDateTimePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDateTimePickerController.m; sourceTree = "<group>"; };
+		571EF04E182F244E00B92ADA /* BListPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BListPickerController.h; sourceTree = "<group>"; };
+		571EF04F182F244E00B92ADA /* BListPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BListPickerController.m; sourceTree = "<group>"; };
+		571EF051182F244E00B92ADA /* MKMapView+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Benihime.h"; sourceTree = "<group>"; };
+		571EF052182F244E00B92ADA /* MKMapView+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Benihime.m"; sourceTree = "<group>"; };
+		571EF053182F244E00B92ADA /* NSArray+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Benihime.h"; sourceTree = "<group>"; };
+		571EF054182F244E00B92ADA /* NSArray+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Benihime.m"; sourceTree = "<group>"; };
+		571EF055182F244E00B92ADA /* NSCharacterSet+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+Benihime.h"; sourceTree = "<group>"; };
+		571EF056182F244E00B92ADA /* NSCharacterSet+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+Benihime.m"; sourceTree = "<group>"; };
+		571EF057182F244E00B92ADA /* NSDate+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Benihime.h"; sourceTree = "<group>"; };
+		571EF058182F244E00B92ADA /* NSDate+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Benihime.m"; sourceTree = "<group>"; };
+		571EF059182F244E00B92ADA /* NSDictionary+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Benihime.h"; sourceTree = "<group>"; };
+		571EF05A182F244E00B92ADA /* NSDictionary+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Benihime.m"; sourceTree = "<group>"; };
+		571EF05B182F244E00B92ADA /* NSError+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Benihime.h"; sourceTree = "<group>"; };
+		571EF05C182F244E00B92ADA /* NSError+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Benihime.m"; sourceTree = "<group>"; };
+		571EF05D182F244E00B92ADA /* NSIndexPath+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+Benihime.h"; sourceTree = "<group>"; };
+		571EF05E182F244E00B92ADA /* NSIndexPath+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Benihime.m"; sourceTree = "<group>"; };
+		571EF05F182F244E00B92ADA /* NSMutableArray+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Benihime.h"; sourceTree = "<group>"; };
+		571EF060182F244E00B92ADA /* NSMutableArray+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Benihime.m"; sourceTree = "<group>"; };
+		571EF061182F244E00B92ADA /* NSNumber+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Benihime.h"; sourceTree = "<group>"; };
+		571EF062182F244E00B92ADA /* NSNumber+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Benihime.m"; sourceTree = "<group>"; };
+		571EF063182F244E00B92ADA /* NSString+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Benihime.h"; sourceTree = "<group>"; };
+		571EF064182F244E00B92ADA /* NSString+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Benihime.m"; sourceTree = "<group>"; };
+		571EF065182F244E00B92ADA /* UIAlertView+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Benihime.h"; sourceTree = "<group>"; };
+		571EF066182F244E00B92ADA /* UIAlertView+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Benihime.m"; sourceTree = "<group>"; };
+		571EF067182F244E00B92ADA /* UIColor+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Benihime.h"; sourceTree = "<group>"; };
+		571EF068182F244E00B92ADA /* UIColor+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Benihime.m"; sourceTree = "<group>"; };
+		571EF069182F244E00B92ADA /* UIImage+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Benihime.h"; sourceTree = "<group>"; };
+		571EF06A182F244E00B92ADA /* UIImage+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Benihime.m"; sourceTree = "<group>"; };
+		571EF06B182F244E00B92ADA /* UINavigationController+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Benihime.h"; sourceTree = "<group>"; };
+		571EF06C182F244E00B92ADA /* UINavigationController+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Benihime.m"; sourceTree = "<group>"; };
+		571EF06D182F244E00B92ADA /* UITableView+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Benihime.h"; sourceTree = "<group>"; };
+		571EF06E182F244E00B92ADA /* UITableView+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Benihime.m"; sourceTree = "<group>"; };
+		571EF06F182F244E00B92ADA /* UIView+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Benihime.h"; sourceTree = "<group>"; };
+		571EF070182F244E00B92ADA /* UIView+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Benihime.m"; sourceTree = "<group>"; };
+		571EF071182F244E00B92ADA /* UIViewController+Benihime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Benihime.h"; sourceTree = "<group>"; };
+		571EF072182F244E00B92ADA /* UIViewController+Benihime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Benihime.m"; sourceTree = "<group>"; };
+		571EF074182F244E00B92ADA /* BMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapAnnotation.h; sourceTree = "<group>"; };
+		571EF075182F244E00B92ADA /* BMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMapAnnotation.m; sourceTree = "<group>"; };
+		571EF077182F244E00B92ADA /* BUIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUIScrollView.h; sourceTree = "<group>"; };
+		571EF078182F244E00B92ADA /* BUIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUIScrollView.m; sourceTree = "<group>"; };
+		571EF07B182F244E00B92ADA /* NSDictionary+UrlEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+UrlEncoding.h"; sourceTree = "<group>"; };
+		571EF07C182F244E00B92ADA /* NSDictionary+UrlEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+UrlEncoding.m"; sourceTree = "<group>"; };
+		571EF07D182F244E00B92ADA /* UIFont+Traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Traits.h"; sourceTree = "<group>"; };
+		571EF07E182F244E00B92ADA /* UIFont+Traits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Traits.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57047CA2182F23CF00C31854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57047CA9182F23CF00C31854 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57047CB2182F23CF00C31854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57047CBD182F23CF00C31854 /* libBenihime.a in Frameworks */,
+				57047CB7182F23CF00C31854 /* XCTest.framework in Frameworks */,
+				57047CBA182F23CF00C31854 /* UIKit.framework in Frameworks */,
+				57047CB8182F23CF00C31854 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57047C9C182F23CF00C31854 = {
+			isa = PBXGroup;
+			children = (
+				57047CAA182F23CF00C31854 /* Benihime */,
+				57047CBE182F23CF00C31854 /* BenihimeTests */,
+				57047CA7182F23CF00C31854 /* Frameworks */,
+				57047CA6182F23CF00C31854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57047CA6182F23CF00C31854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57047CA5182F23CF00C31854 /* libBenihime.a */,
+				57047CB5182F23CF00C31854 /* BenihimeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57047CA7182F23CF00C31854 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57047CA8182F23CF00C31854 /* Foundation.framework */,
+				57047CB6182F23CF00C31854 /* XCTest.framework */,
+				57047CB9182F23CF00C31854 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57047CAA182F23CF00C31854 /* Benihime */ = {
+			isa = PBXGroup;
+			children = (
+				571EF044182F244E00B92ADA /* BCGeometry.h */,
+				571EF045182F244E00B92ADA /* BCGeometry.m */,
+				571EF046182F244E00B92ADA /* BCoreLocation.h */,
+				571EF047182F244E00B92ADA /* BCoreLocation.m */,
+				57047CAD182F23CF00C31854 /* Benihime.h */,
+				57047CAF182F23CF00C31854 /* Benihime.m */,
+				571EF048182F244E00B92ADA /* BKeyValuePair.h */,
+				571EF049182F244E00B92ADA /* BKeyValuePair.m */,
+				571EF04A182F244E00B92ADA /* BMacros.h */,
+				571EF04B182F244E00B92ADA /* Components */,
+				571EF050182F244E00B92ADA /* Extensions */,
+				571EF073182F244E00B92ADA /* Models */,
+				57047CAB182F23CF00C31854 /* Supporting Files */,
+				571EF076182F244E00B92ADA /* UI */,
+				571EF079182F244E00B92ADA /* Vendors */,
+			);
+			path = Benihime;
+			sourceTree = "<group>";
+		};
+		57047CAB182F23CF00C31854 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57047CAC182F23CF00C31854 /* Benihime-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57047CBE182F23CF00C31854 /* BenihimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				57047CC4182F23CF00C31854 /* BenihimeTests.m */,
+				57047CBF182F23CF00C31854 /* Supporting Files */,
+			);
+			path = BenihimeTests;
+			sourceTree = "<group>";
+		};
+		57047CBF182F23CF00C31854 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57047CC0182F23CF00C31854 /* BenihimeTests-Info.plist */,
+				57047CC1182F23CF00C31854 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		571EF04B182F244E00B92ADA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				571EF04C182F244E00B92ADA /* BDateTimePickerController.h */,
+				571EF04D182F244E00B92ADA /* BDateTimePickerController.m */,
+				571EF04E182F244E00B92ADA /* BListPickerController.h */,
+				571EF04F182F244E00B92ADA /* BListPickerController.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		571EF050182F244E00B92ADA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				571EF051182F244E00B92ADA /* MKMapView+Benihime.h */,
+				571EF052182F244E00B92ADA /* MKMapView+Benihime.m */,
+				571EF053182F244E00B92ADA /* NSArray+Benihime.h */,
+				571EF054182F244E00B92ADA /* NSArray+Benihime.m */,
+				571EF055182F244E00B92ADA /* NSCharacterSet+Benihime.h */,
+				571EF056182F244E00B92ADA /* NSCharacterSet+Benihime.m */,
+				571EF057182F244E00B92ADA /* NSDate+Benihime.h */,
+				571EF058182F244E00B92ADA /* NSDate+Benihime.m */,
+				571EF059182F244E00B92ADA /* NSDictionary+Benihime.h */,
+				571EF05A182F244E00B92ADA /* NSDictionary+Benihime.m */,
+				571EF05B182F244E00B92ADA /* NSError+Benihime.h */,
+				571EF05C182F244E00B92ADA /* NSError+Benihime.m */,
+				571EF05D182F244E00B92ADA /* NSIndexPath+Benihime.h */,
+				571EF05E182F244E00B92ADA /* NSIndexPath+Benihime.m */,
+				571EF05F182F244E00B92ADA /* NSMutableArray+Benihime.h */,
+				571EF060182F244E00B92ADA /* NSMutableArray+Benihime.m */,
+				571EF061182F244E00B92ADA /* NSNumber+Benihime.h */,
+				571EF062182F244E00B92ADA /* NSNumber+Benihime.m */,
+				571EF063182F244E00B92ADA /* NSString+Benihime.h */,
+				571EF064182F244E00B92ADA /* NSString+Benihime.m */,
+				571EF065182F244E00B92ADA /* UIAlertView+Benihime.h */,
+				571EF066182F244E00B92ADA /* UIAlertView+Benihime.m */,
+				571EF067182F244E00B92ADA /* UIColor+Benihime.h */,
+				571EF068182F244E00B92ADA /* UIColor+Benihime.m */,
+				571EF069182F244E00B92ADA /* UIImage+Benihime.h */,
+				571EF06A182F244E00B92ADA /* UIImage+Benihime.m */,
+				571EF06B182F244E00B92ADA /* UINavigationController+Benihime.h */,
+				571EF06C182F244E00B92ADA /* UINavigationController+Benihime.m */,
+				571EF06D182F244E00B92ADA /* UITableView+Benihime.h */,
+				571EF06E182F244E00B92ADA /* UITableView+Benihime.m */,
+				571EF06F182F244E00B92ADA /* UIView+Benihime.h */,
+				571EF070182F244E00B92ADA /* UIView+Benihime.m */,
+				571EF071182F244E00B92ADA /* UIViewController+Benihime.h */,
+				571EF072182F244E00B92ADA /* UIViewController+Benihime.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		571EF073182F244E00B92ADA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				571EF074182F244E00B92ADA /* BMapAnnotation.h */,
+				571EF075182F244E00B92ADA /* BMapAnnotation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		571EF076182F244E00B92ADA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				571EF077182F244E00B92ADA /* BUIScrollView.h */,
+				571EF078182F244E00B92ADA /* BUIScrollView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		571EF079182F244E00B92ADA /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				571EF07A182F244E00B92ADA /* Extensions */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		571EF07A182F244E00B92ADA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				571EF07B182F244E00B92ADA /* NSDictionary+UrlEncoding.h */,
+				571EF07C182F244E00B92ADA /* NSDictionary+UrlEncoding.m */,
+				571EF07D182F244E00B92ADA /* UIFont+Traits.h */,
+				571EF07E182F244E00B92ADA /* UIFont+Traits.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57047CA4182F23CF00C31854 /* Benihime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57047CC8182F23CF00C31854 /* Build configuration list for PBXNativeTarget "Benihime" */;
+			buildPhases = (
+				57047CA1182F23CF00C31854 /* Sources */,
+				57047CA2182F23CF00C31854 /* Frameworks */,
+				57047CA3182F23CF00C31854 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Benihime;
+			productName = Benihime;
+			productReference = 57047CA5182F23CF00C31854 /* libBenihime.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		57047CB4182F23CF00C31854 /* BenihimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57047CCB182F23CF00C31854 /* Build configuration list for PBXNativeTarget "BenihimeTests" */;
+			buildPhases = (
+				57047CB1182F23CF00C31854 /* Sources */,
+				57047CB2182F23CF00C31854 /* Frameworks */,
+				57047CB3182F23CF00C31854 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57047CBC182F23CF00C31854 /* PBXTargetDependency */,
+			);
+			name = BenihimeTests;
+			productName = BenihimeTests;
+			productReference = 57047CB5182F23CF00C31854 /* BenihimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57047C9D182F23CF00C31854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Shiki;
+			};
+			buildConfigurationList = 57047CA0182F23CF00C31854 /* Build configuration list for PBXProject "Benihime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 57047C9C182F23CF00C31854;
+			productRefGroup = 57047CA6182F23CF00C31854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57047CA4182F23CF00C31854 /* Benihime */,
+				57047CB4182F23CF00C31854 /* BenihimeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57047CB3182F23CF00C31854 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57047CC3182F23CF00C31854 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57047CA1182F23CF00C31854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571EF096182F244E00B92ADA /* BUIScrollView.m in Sources */,
+				571EF08A182F244E00B92ADA /* NSIndexPath+Benihime.m in Sources */,
+				571EF089182F244E00B92ADA /* NSError+Benihime.m in Sources */,
+				571EF091182F244E00B92ADA /* UINavigationController+Benihime.m in Sources */,
+				571EF08D182F244E00B92ADA /* NSString+Benihime.m in Sources */,
+				571EF083182F244E00B92ADA /* BListPickerController.m in Sources */,
+				571EF085182F244E00B92ADA /* NSArray+Benihime.m in Sources */,
+				571EF090182F244E00B92ADA /* UIImage+Benihime.m in Sources */,
+				571EF08E182F244E00B92ADA /* UIAlertView+Benihime.m in Sources */,
+				571EF088182F244E00B92ADA /* NSDictionary+Benihime.m in Sources */,
+				571EF080182F244E00B92ADA /* BCoreLocation.m in Sources */,
+				571EF084182F244E00B92ADA /* MKMapView+Benihime.m in Sources */,
+				571EF07F182F244E00B92ADA /* BCGeometry.m in Sources */,
+				571EF08C182F244E00B92ADA /* NSNumber+Benihime.m in Sources */,
+				571EF094182F244E00B92ADA /* UIViewController+Benihime.m in Sources */,
+				571EF081182F244E00B92ADA /* BKeyValuePair.m in Sources */,
+				571EF082182F244E00B92ADA /* BDateTimePickerController.m in Sources */,
+				57047CB0182F23CF00C31854 /* Benihime.m in Sources */,
+				571EF086182F244E00B92ADA /* NSCharacterSet+Benihime.m in Sources */,
+				571EF08B182F244E00B92ADA /* NSMutableArray+Benihime.m in Sources */,
+				571EF08F182F244E00B92ADA /* UIColor+Benihime.m in Sources */,
+				571EF087182F244E00B92ADA /* NSDate+Benihime.m in Sources */,
+				571EF092182F244E00B92ADA /* UITableView+Benihime.m in Sources */,
+				571EF095182F244E00B92ADA /* BMapAnnotation.m in Sources */,
+				571EF098182F244E00B92ADA /* UIFont+Traits.m in Sources */,
+				571EF093182F244E00B92ADA /* UIView+Benihime.m in Sources */,
+				571EF097182F244E00B92ADA /* NSDictionary+UrlEncoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57047CB1182F23CF00C31854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57047CC5182F23CF00C31854 /* BenihimeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57047CBC182F23CF00C31854 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57047CA4182F23CF00C31854 /* Benihime */;
+			targetProxy = 57047CBB182F23CF00C31854 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57047CC1182F23CF00C31854 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57047CC2182F23CF00C31854 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57047CC6182F23CF00C31854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		57047CC7182F23CF00C31854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57047CC9182F23CF00C31854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Benihime.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Benihime/Benihime-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		57047CCA182F23CF00C31854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Benihime.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Benihime/Benihime-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		57047CCC182F23CF00C31854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Benihime/Benihime-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BenihimeTests/BenihimeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		57047CCD182F23CF00C31854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Benihime/Benihime-Prefix.pch";
+				INFOPLIST_FILE = "BenihimeTests/BenihimeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57047CA0182F23CF00C31854 /* Build configuration list for PBXProject "Benihime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57047CC6182F23CF00C31854 /* Debug */,
+				57047CC7182F23CF00C31854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57047CC8182F23CF00C31854 /* Build configuration list for PBXNativeTarget "Benihime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57047CC9182F23CF00C31854 /* Debug */,
+				57047CCA182F23CF00C31854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57047CCB182F23CF00C31854 /* Build configuration list for PBXNativeTarget "BenihimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57047CCC182F23CF00C31854 /* Debug */,
+				57047CCD182F23CF00C31854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57047C9D182F23CF00C31854 /* Project object */;
+}
