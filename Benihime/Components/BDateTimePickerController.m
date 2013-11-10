@@ -57,7 +57,7 @@
   _textField.borderStyle = UITextBorderStyleRoundedRect;
   _textField.font = [UIFont systemFontOfSize:14];
   _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-  _textField.textAlignment = UITextAlignmentCenter;
+  _textField.textAlignment = NSTextAlignmentCenter;
   _textField.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
   CGFloat height = 31;
   CGFloat margin = 10;

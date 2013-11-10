@@ -42,6 +42,8 @@
 		571EF096182F244E00B92ADA /* BUIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF078182F244E00B92ADA /* BUIScrollView.m */; };
 		571EF097182F244E00B92ADA /* NSDictionary+UrlEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF07C182F244E00B92ADA /* NSDictionary+UrlEncoding.m */; };
 		571EF098182F244E00B92ADA /* UIFont+Traits.m in Sources */ = {isa = PBXBuildFile; fileRef = 571EF07E182F244E00B92ADA /* UIFont+Traits.m */; };
+		571EF09A182F2B3300B92ADA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571EF099182F2B3300B92ADA /* UIKit.framework */; };
+		571EF09C182F2B3900B92ADA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571EF09B182F2B3900B92ADA /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		571EF07C182F244E00B92ADA /* NSDictionary+UrlEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+UrlEncoding.m"; sourceTree = "<group>"; };
 		571EF07D182F244E00B92ADA /* UIFont+Traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Traits.h"; sourceTree = "<group>"; };
 		571EF07E182F244E00B92ADA /* UIFont+Traits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Traits.m"; sourceTree = "<group>"; };
+		571EF099182F2B3300B92ADA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		571EF09B182F2B3900B92ADA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571EF09C182F2B3900B92ADA /* MapKit.framework in Frameworks */,
+				571EF09A182F2B3300B92ADA /* UIKit.framework in Frameworks */,
 				57047CA9182F23CF00C31854 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +185,8 @@
 		57047CA7182F23CF00C31854 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				571EF09B182F2B3900B92ADA /* MapKit.framework */,
+				571EF099182F2B3300B92ADA /* UIKit.framework */,
 				57047CA8182F23CF00C31854 /* Foundation.framework */,
 				57047CB6182F23CF00C31854 /* XCTest.framework */,
 				57047CB9182F23CF00C31854 /* UIKit.framework */,
