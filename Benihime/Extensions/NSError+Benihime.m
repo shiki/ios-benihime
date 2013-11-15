@@ -27,8 +27,7 @@
   NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
   if (dict)
     [userInfo addEntriesFromDictionary:dict];
-  if (![userInfo objectForKey:NSLocalizedDescriptionKey])
-    [userInfo setObject:description forKey:NSLocalizedDescriptionKey];
+  [userInfo setObject:description forKey:NSLocalizedDescriptionKey];
 
   NSError *ret = [NSError errorWithDomain:domain code:code userInfo:userInfo];
   return ret;
