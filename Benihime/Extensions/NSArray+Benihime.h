@@ -31,4 +31,6 @@
 - (NSString *)jsonString:(NSJSONWritingOptions)opt;
 - (NSString *)jsonString;
 
+- (NSArray *)reversedArray;
+
 @end
