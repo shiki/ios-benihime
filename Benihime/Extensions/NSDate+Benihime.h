@@ -22,5 +22,9 @@
 - (NSInteger)year;
 - (NSInteger)yearUsingCalendar:(NSCalendar *)calendar;
 
+/**
+ Returns YES if self has the same year, month, and day values as `date`.
+ */
+- (BOOL)isEqualToDay:(NSDate *)date;
 
 @end

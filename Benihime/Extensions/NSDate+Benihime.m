@@ -50,5 +50,14 @@
   return [components year];
 }
 
+- (BOOL)isEqualToDay:(NSDate *)date {
+  NSUInteger flags = NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit;
+  NSCalendar *calendar = NSCalendar.currentCalendar;
+  NSDateComponents *selfComponents = [calendar components:flags fromDate:self];
+  NSDateComponents *compareComponents = [calendar components:flags fromDate:date];
+  return selfComponents.year == compareComponents.year
+    && selfComponents.month == compareComponents.month
+    && selfComponents.day == compareComponents.day;
+}
 
 @end
