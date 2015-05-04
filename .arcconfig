@@ -1,0 +1,8 @@
+{
+  "project_id": "Benihime",
+  "conduit_uri": "http://phab.lifebit.com/",
+  "lint.engine": "FufuLinter",
+  "load": [
+    "arcanist/phutil-lib"
+  ]
+}

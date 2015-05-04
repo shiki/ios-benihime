@@ -1,0 +1,1 @@
+{"__symbol_cache_version__":8,"8b932d80b91f0ce15a4f2028c1ca2db9":{"have":{"class":{"FufuLinter":19}},"need":{"class":{"ArcanistLintEngine":38,"ArcanistGeneratedLinter":609,"ArcanistNoLintLinter":698,"ArcanistTextLinter":779,"ArcanistFilenameLinter":1406,"ArcanistPhpcsLinter":2286}},"xmap":{"FufuLinter":["ArcanistLintEngine"]}}}

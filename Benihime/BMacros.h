@@ -10,9 +10,14 @@
 // http://stackoverflow.com/a/13156390/246142
 #define DEVICE_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define DEVICE_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define DEVICE_IS_TALL_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+#define DEVICE_IS_SHORT_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 480.0f)
+#define DEVICE_IS_IPHONE_5_or_5S (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+#define DEVICE_IS_IPHONE_6 (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 667.0f)
+#define DEVICE_IS_IPHONE_6PLUS (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 736.0f)
 
+#define DEVICE_IS_NON_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale < 2.0))
 #define DEVICE_IS_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))
+#define DEVICE_IS_RETINA_HD ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 3.0))
 
 /**
  * System Versioning Preprocessor Macros
