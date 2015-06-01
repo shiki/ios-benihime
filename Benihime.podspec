@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name    = 'Benihime'
-  s.version = '0.1.3'
+  s.version = '0.1.4'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A collection of independent utility classes for iOS projects.'
   s.homepage = 'http://github.com/shiki/ios-benihime'
