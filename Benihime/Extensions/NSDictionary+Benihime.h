@@ -17,4 +17,13 @@
 - (NSString *)jsonString:(NSJSONWritingOptions)opt;
 - (NSString *)jsonString;
 
+/**
+ *  Returns nil if the object pointed to by key is NSNull.
+ *
+ *  @param key The key
+ *
+ *  @return The object. Will be nil if the real object is NSNull
+ */
+- (id)safeObjectForKey:(id)key;
+
 @end

@@ -41,4 +41,13 @@
   return [self jsonString:0];
 }
 
+- (id)safeObjectForKey:(id)key {
+  id obj = [self objectForKey:key];
+  if ([NSNull.null isEqual:obj]) {
+    return nil;
+  } else {
+    return obj;
+  }
+}
+
 @end
