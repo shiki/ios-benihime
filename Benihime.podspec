@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name    = 'Benihime'
-  s.version = '0.1.4'
+  s.version = '0.2.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A collection of independent utility classes for iOS projects.'
   s.homepage = 'http://github.com/shiki/ios-benihime'
   s.authors = {
-    'Shiki' => 'bj@basanes.net',
+    'Shiki' => 'jayson@basanes.net',
     'timominous' => 'timominous@gmail.com'
   }
 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/shiki/ios-benihime.git',
     :tag => "#{s.version}"
   }
-  s.platform = :ios, '6.0'
+  s.platform = :ios, '7.0'
   s.requires_arc = true
   s.frameworks = 'UIKit', 'MapKit'
 
