@@ -28,4 +28,7 @@
 - (UIView *)childWithClass:(Class)childClass;
 + (UIView *)childOfView:(UIView *)parent withClass:(Class)childClass;
 
+// From: http://stackoverflow.com/a/3732812
+- (UIViewController *)firstAvailableViewController;
+
 @end
