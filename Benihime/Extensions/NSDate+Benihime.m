@@ -60,4 +60,12 @@
     && selfComponents.day == compareComponents.day;
 }
 
+- (NSDate *)dateWithZeroSeconds {
+    NSCalendar *calendar = NSCalendar.currentCalendar;
+    NSCalendarUnit flags = NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay |
+                           NSCalendarUnitHour | NSCalendarUnitMinute;
+    NSDateComponents *components = [calendar components:flags fromDate:self];
+    return [calendar dateFromComponents:components];
+}
+
 @end

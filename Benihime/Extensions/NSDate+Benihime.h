@@ -27,4 +27,9 @@
  */
 - (BOOL)isEqualToDay:(NSDate *)date;
 
+/**
+ *  Returns a NSDate with the same value as self but with 0 seconds.
+ */
+- (NSDate *)dateWithZeroSeconds;
+
 @end
