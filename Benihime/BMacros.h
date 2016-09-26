@@ -7,24 +7,31 @@
 #define B_UI_ORIENTATION_IS_PORTRAIT() UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 #define B_UI_ORIENTATION_IS_LANDSCAPE() UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
 
-#define SHORT_IPHONE_HEIGHT 480.0f
-#define IPHONE_5_HEIGHT 568.0f // includes iPhones 5S and 5C, and iPod 5
-#define IPHONE_6_HEIGHT 667.0f
-#define IPHONE_6PLUS_HEIGHT 736.0f
-
 // http://stackoverflow.com/a/13156390/246142
 #define DEVICE_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define DEVICE_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+/**
+ ***  DEVICES  ***
+ *
+ * SHORT  : iPhones (4S, older), iPods (4, older)
+ * 4-INCH : iPhones (5, 5S, 5C, SE), iPods (5, 6)
+ * TALL   : iPhones (6, 6S, 7)
+ * PLUS   : Plus iPhones (6, 6S, 7)
+ */
+
+#define SHORT_IPHONE_HEIGHT 480.0f
+#define FOUR_INCH_IPHONE_HEIGHT 568.0f
+#define TALL_IPHONE_HEIGHT 667.0f
+#define PLUS_IPHONE_HEIGHT 736.0f
+
 #define DEVICE_IS_SHORT_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == SHORT_IPHONE_HEIGHT)
-
-// includes iPhones 5S and 5C
-#define DEVICE_IS_IPHONE_5 (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == IPHONE_5_HEIGHT)
-
-#define DEVICE_IS_IPHONE_6 (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == IPHONE_6_HEIGHT)
-#define DEVICE_IS_IPHONE_6PLUS (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == IPHONE_6PLUS_HEIGHT)
+#define DEVICE_IS_FOUR_INCH_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == FOUR_INCH_IPHONE_HEIGHT)
+#define DEVICE_IS_TALL_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == TALL_IPHONE_HEIGHT)
+#define DEVICE_IS_PLUS_IPHONE (DEVICE_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == PLUS_IPHONE_HEIGHT)
 
 #define DEVICE_IS_SHORT_IPHONE_or_IPOD ([[UIScreen mainScreen] bounds].size.height == SHORT_IPHONE_HEIGHT)
-#define DEVICE_IS_IPHONE_5_or_IPOD_5 ([[UIScreen mainScreen] bounds].size.height == IPHONE_5_HEIGHT) // includes iPhones 5S and 5C
+#define DEVICE_IS_FOUR_INCH_IPHONE_or_IPOD ([[UIScreen mainScreen] bounds].size.height == FOUR_INCH_IPHONE_HEIGHT)
 
 #define DEVICE_IS_NON_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale < 2.0))
 #define DEVICE_IS_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))
